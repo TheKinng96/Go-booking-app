@@ -6,9 +6,9 @@ import (
 	"log"
 	"net/http"
 
-	"github.com/TheKinng96/Go-booking-app/models"
-	"github.com/TheKinng96/Go-booking-app/pkg/config"
-	"github.com/TheKinng96/Go-booking-app/pkg/render"
+	"github.com/TheKinng96/Go-booking-app/internal/config"
+	"github.com/TheKinng96/Go-booking-app/internal/models"
+	"github.com/TheKinng96/Go-booking-app/internal/render"
 )
 
 // Repository used by controllers
