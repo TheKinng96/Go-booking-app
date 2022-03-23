@@ -7,6 +7,7 @@ import (
 	"net/http"
 
 	"github.com/TheKinng96/Go-booking-app/internal/config"
+	"github.com/TheKinng96/Go-booking-app/internal/forms"
 	"github.com/TheKinng96/Go-booking-app/internal/models"
 	"github.com/TheKinng96/Go-booking-app/internal/render"
 )
@@ -52,7 +53,13 @@ func (m *Repository) About(w http.ResponseWriter, r *http.Request) {
 }
 
 func (m *Repository) Reservation(w http.ResponseWriter, r *http.Request) {
-	render.RenderTemplate(w, r, "make-reservation.page.html", &models.TemplateData{})
+	render.RenderTemplate(w, r, "make-reservation.page.html", &models.TemplateData{
+		Form: forms.New(nil),
+	})
+}
+
+func (m *Repository) PostReservation(w http.ResponseWriter, r *http.Request) {
+
 }
 
 func (m *Repository) Generals(w http.ResponseWriter, r *http.Request) {
